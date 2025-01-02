@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Pendidikan anak usia dini paud di Kota Bandung</title>
+    <style>
+      :root {
+        --primary: #2c3e50;
+        --secondary: #34495e;
+        --accent: #3498db;
+        --light: #ecf0f1;
+        --success: #27ae60;
+        --text: #2c3e50;
+        --card-bg: #ffffff;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f6fa;
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        background: var(--primary);
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(52, 152, 219, 0.1) 0%,
+          rgba(44, 62, 80, 0.1) 100%
+        );
+        z-index: 1;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2rem;
+        color: var(--light);
+        font-weight: 600;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+      }
+
+      .dashboard-container {
+        max-width: 1400px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+      }
+
+      .info-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h2 {
+        color: var(--primary);
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .card p {
+        color: var(--secondary);
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      .tableau-section {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .tableauPlaceholder {
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      footer {
+        background: var(--primary);
+        color: var(--light);
+        padding: 1rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.875rem;
+        opacity: 0.9;
+      }
+
+      @media (max-width: 768px) {
+        .info-section {
+          grid-template-columns: 1fr;
+        }
+
+        header h1 {
+          font-size: 1.75rem;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Data Pendidikan Anak Usia Dini (PAUD) di Kota Bandung</h1>
+    </header>
+
+    <div class="dashboard-container">
+      <div class="info-section">
+        <div class="card">
+          <h2>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="8"></line>
+            </svg>
+            Filterisasi Data
+          </h2>
+          <p>
+            Data yang ditampilkan dapat di filterisasi berdasarkan tahun, jenis pendidikan, status sekolah, dan nama kecamatan.
+          </p>
+        </div>
+        <div class="card">
+          <h2>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 20V10"></path>
+              <path d="M18 20V4"></path>
+              <path d="M6 20v-4"></path>
+            </svg>
+            Grafik Data
+          </h2>
+          <p>
+            Grafik data yang dapat menampilkan informasi mengenai Perkembangan Data.
+          </p>
+        </div>
+        <div class="card">
+          <h2>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            Menganalisis Data
+          </h2>
+          <p>Dengan menganalisis data akan memudahkan dalam pengolahan data.</p>
+        </div>
+      </div>
+<center>
+      <div class="tableau-section">
+        <div
+        class="tableauPlaceholder"
+        id="viz1735708232979"
+        style="position: relative"
+        >
+          <noscript>
+            <a href="#">
+              <img
+              alt="Dashboard 2 "
+              src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DW&#47;DW_KEL3&#47;Dashboard2&#47;1_rss.png"
+              style="border: none"
+              />
+            </a>
+          </noscript>
+          ><object class="tableauViz" style="display: none">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+            <param name="embed_code_version" value="3" />
+            <param name="site_root" value="" />
+            <param name="name" value="DW_KEL3&#47;Dashboard2" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="yes" />
+            <param
+              name="static_image"
+              value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DW&#47;DW_KEL3&#47;Dashboard2&#47;1.png"
+            />
+            <param name="animate_transition" value="yes" />
+            <param name="display_static_image" value="yes" />
+            <param name="display_spinner" value="yes" />
+            <param name="display_overlay" value="yes" />
+            <param name="display_count" value="yes" />
+            <param name="language" value="en-US" />
+            <param name="filter" value="publish=yes" />
+          </object>
+        </div>
+      </div>
+    </div>
+  </center>
+    <footer>
+      <p>&copy; 2025 Kelompok 3 • Project DataWarehouse</p>
+    </footer>
+
+    <script type="text/javascript">
+      var divElement = document.getElementById("viz1735708232979");
+      var vizElement = divElement.getElementsByTagName("object")[0];
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.width = "1000px";
+        vizElement.style.height = "827px";
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = "1000px";
+        vizElement.style.height = "827px";
+      } else {
+        vizElement.style.width = "100%";
+        vizElement.style.height = "1427px";
+      }
+      var scriptElement = document.createElement("script");
+      scriptElement.src =
+        "https://public.tableau.com/javascripts/api/viz_v1.js";
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+  </body>
+</html>
